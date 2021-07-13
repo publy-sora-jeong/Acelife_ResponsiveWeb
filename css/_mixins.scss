@@ -1,0 +1,70 @@
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+@mixin push--auto {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+}
+
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+	$padding: unquote(($y / $x) * 100 + "%");
+
+	@if $pseudo {
+		&:before {
+			@include pseudo($pos: relative);
+			width: 100%;
+			padding-top: $padding;
+		}
+	} @else {
+		padding-top: $padding;
+	}
+}
+
+@mixin ellipsis($truncation-boundary) {
+	max-width: $truncation-boundary;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+$breakpoints: (
+	"phone": 360px,
+	"phone-mid": 414px,
+	"phone-wide": 480px,
+	"phablet": 560px,
+	"tablet-small": 640px,
+	"tablet": 768px,
+	"tablet2": 830px,
+	"tablet-wide": 1024px,
+	"contents": 1200px,
+	"custom14": 1440px,
+	"custom16": 1600px,
+	"custom17": 1700px,
+	"custom18": 1800,
+);
+
+@mixin mq($width, $type: max) {
+	@if map_has_key($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
+
+		@if $type==max {
+			$width: $width;
+		}
+
+		@media screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}
+
+@mixin bgProperty($bgUrl, $posX, $posY) {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: $posX $posY;
+	background-image: url($bgUrl);
+}

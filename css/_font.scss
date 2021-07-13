@@ -1,0 +1,67 @@
+@font-face {
+	font-family: "NanumBarunGothic";
+	font-style: normal;
+	font-weight: 400;
+	src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+	src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix")
+			format("embedded-opentype"),
+		url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff")
+			format("woff"),
+		url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf")
+			format("truetype");
+}
+
+@font-face {
+	font-family: "NanumBarunGothic";
+	font-style: normal;
+	font-weight: 700;
+	src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+	src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix")
+			format("embedded-opentype"),
+		url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff")
+			format("woff"),
+		url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf")
+			format("truetype");
+}
+
+@font-face {
+	font-family: "NanumBarunGothic";
+	font-style: normal;
+	font-weight: 300;
+	src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+	src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix")
+			format("embedded-opentype"),
+		url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff")
+			format("woff"),
+		url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf")
+			format("truetype");
+}
+
+.nanumbarungothic * {
+	font-family: "NanumBarunGothic", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap");
+
+@font-face {
+	font-family: "NanumSquare";
+	font-weight: 800;
+	src: url(https://cdn.rawgit.com/moonspam/NanumSquare/master/NanumSquareEB.eot);
+	src: url(https://cdn.rawgit.com/moonspam/NanumSquare/master/NanumSquareEB.eot?#iefix)
+			format("embedded-opentype"),
+		url(https://cdn.rawgit.com/moonspam/NanumSquare/master/NanumSquareEB.woff)
+			format("woff"),
+		url(https://cdn.rawgit.com/moonspam/NanumSquare/master/NanumSquareEB.ttf)
+			format("truetype");
+}
+
+.nanumsquare {
+	font-family: "NanumSquare", sans-serif !important;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+//font-family: 'Ubuntu', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+//font-family: 'Montserrat', sans-serif;

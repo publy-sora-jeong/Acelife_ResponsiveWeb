@@ -1,0 +1,153 @@
+<div class="swiper-container v-items">
+      <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+</div>
+
+<script>
+
+
+      // breakpoint where swiper will be destroyed
+      // and switches to a dual-column layout
+      const breakpoint = window.matchMedia('(min-width:31.25em)');
+
+      // keep track of swiper instances to destroy later
+      let mySwiper;
+
+      //////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////
+
+      const breakpointChecker = function () {
+
+            // if larger viewport and multi-row layout needed
+            if (breakpoint.matches === true) {
+
+                  // clean up old instances and inline styles when available
+                  if (mySwiper !== undefined) mySwiper.destroy(true, true);
+
+                  // or/and do nothing
+                  return;
+
+                  // else if a small viewport and single column layout needed
+            } else if (breakpoint.matches === false) {
+
+                  // fire small viewport version of swiper
+                  return enableSwiper();
+
+            }
+
+      };
+
+      //////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////
+
+      const enableSwiper = function () {
+
+            mySwiper = new Swiper('.swiper-container', {
+
+                  loop: true,
+
+                  slidesPerView: 'auto',
+
+                  centeredSlides: true,
+
+                  a11y: true,
+                  keyboardControl: true,
+                  grabCursor: true,
+
+                  // pagination
+                  pagination: '.swiper-pagination',
+                  paginationClickable: true,
+
+            });
+
+      };
+
+      //////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////////////////
+
+      // keep an eye on viewport size changes
+      breakpoint.addListener(breakpointChecker);
+
+      // kickstart
+      breakpointChecker();
+
+
+
+</script>
+
+
+
+<video width="400" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+</video>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="swiper-container mySwiper2">
+      <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </div>
+            <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+</div>
+<div thumbsSlider="" class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </div>
+            <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </div>
+      </div>
+</div>
+
+<script>
+      var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                  swiper: swiper,
+            },
+      });
+</script>
