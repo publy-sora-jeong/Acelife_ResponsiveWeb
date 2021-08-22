@@ -482,7 +482,7 @@ header {
 	margin: 0 auto;
 	width: 100%;
 	padding-top: 74px;
-	height: 860px;
+	min-height: 860px;
 	min-height: 100vh;
 	position: relative;
 	overflow: hidden;
@@ -558,7 +558,8 @@ header {
 		background-image: url("../img/bg/main_visual_01.png");
 		background-position: top center;
 		background-size: cover;
-		height: 860px;
+		min-height: 860px;
+		min-height: 100vh;
 
 		&.swiper-slide02 {
 			background-image: url("../img/bg/main_visual_02.png");
@@ -657,6 +658,7 @@ header {
 
 		.swiper-slide {
 			height: 600px;
+			min-height: initial;
 		}
 
 		.typo {

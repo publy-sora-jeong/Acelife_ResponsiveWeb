@@ -1299,7 +1299,7 @@ header .search-icon {
   margin: 0 auto;
   width: 100%;
   padding-top: 74px;
-  height: 860px;
+  min-height: 860px;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -1379,7 +1379,8 @@ header .search-icon {
   background-image: url("../img/bg/main_visual_01.png");
   background-position: top center;
   background-size: cover;
-  height: 860px;
+  min-height: 860px;
+  min-height: 100vh;
 }
 
 .main-visual .swiper-slide.swiper-slide02 {
@@ -1488,6 +1489,7 @@ header .search-icon {
   }
   .main-visual .swiper-slide {
     height: 600px;
+    min-height: initial;
   }
   .main-visual .typo {
     -webkit-transform: translateY(-60%);
