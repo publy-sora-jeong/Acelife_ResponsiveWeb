@@ -1,0 +1,46 @@
+.tab-top {
+    width: 1200px;
+    @include push--auto;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+    li {
+        border: 1px solid #e5e5e5;
+        border-bottom: none;
+        width: 100%;
+
+        &:not(:first-child) {
+            border-left: none;
+        }
+
+        &.active {
+            a {
+                background: var(--primary-color);
+                color: #fff;
+            }
+        }
+
+        a {
+            color: #222;
+            font-size: 1.7rem;
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding: 14px 10px;
+            transition: 0.2s;
+        }
+    }
+
+    @include mq("contents") {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+.tab-cnt {
+    margin-top: 3rem;
+}

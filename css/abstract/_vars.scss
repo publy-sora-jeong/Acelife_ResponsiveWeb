@@ -1,0 +1,10 @@
+:root {
+    background: #fff;
+    --secondary-color: #286abd;
+    --primary-color : #ec2028;
+}
+
+$color-red: #ec2028;
+$color-blue: #286abd;
+.col-red { color: $color-red !important;}
+.col-blue { color: $color-blue !important; }

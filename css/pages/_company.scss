@@ -1,0 +1,363 @@
+.company {
+    .company-info-bg {
+        background: url("../img/contents/company_info_bg.png") no-repeat center / cover;
+        height: 560px;
+        color: #fff;
+        position: relative;
+        padding-top: 9rem;
+
+        .txt {
+            width: 1200px;
+            @include push--auto;
+
+            >.t-bold {
+                font-size: 5rem;
+                line-height: 1.2;
+                display: block;
+                font-weight: normal;
+
+                b {
+                    font-weight: bold;
+                }
+            }
+
+            .t01 {
+                font-size: 2.4rem;
+                font-weight: bold;
+                margin-top: 3.5rem;
+            }
+
+            .t02 {
+                font-size: 1.8rem;
+                line-height: 1.45;
+                margin-top: 1.3rem;
+            }
+        }
+    }
+
+    .subtxt {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: normal;
+        margin-top: 11.2rem;
+        font-weight: normal;
+        line-height: 1.5;
+
+        b {
+            font-weight: normal;
+        }
+    }
+
+    .company-service {
+        width: 1200px;
+        @include push--auto;
+        margin-top: 4rem;
+        border: 1px solid #e5e5e5;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            width: 25%;
+            text-align: center;
+            font-size: 2rem;
+            padding: 3rem 1rem;
+
+            .ico {
+                width: 80px;
+                height: 67px;
+                display: block;
+                margin: auto;
+                margin-bottom: 2rem;
+                background-image: url("../img/contents/company_service.png");
+                background-repeat: no-repeat;
+                background-position: 0 0;
+
+                &.ico02 {
+                    background-position: -80px 0;
+                }
+
+                &.ico03 {
+                    background-position: -160px 0;
+                }
+
+                &.ico04 {
+                    background-position: -240px 0;
+                }
+            }
+
+            &:not(:first-child) {
+                border-left: 1px solid #e5e5e5;
+            }
+        }
+    }
+
+    .philosophy {
+        .pager {
+            position: absolute;
+            left: calc(50% - 68px);
+            bottom: 0;
+            z-index: 10;
+            width: 68px;
+            letter-spacing: -10px;
+
+            .ph-next,
+            .ph-prev {
+                letter-spacing: 0;
+                width: 68px;
+                height: 70px;
+                display: block;
+                margin: -2px 0;
+                cursor: pointer;
+            }
+
+            .ph-prev {
+                background: #fff url("../img/icon/v_prev.png") no-repeat center;
+                transform: rotate(90deg);
+            }
+
+            .ph-next {
+                background: var(--primary-color) url("../img/icon/v_next.png") no-repeat center;
+                transform: rotate(90deg);
+            }
+        }
+
+        .ph-container {
+            width: 100%;
+            display: flex;
+            height: 590px;
+            background-color: #fff;
+            position: relative;
+
+            .img {
+                width: 50%;
+                height: 100%;
+            }
+
+            .txt {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                padding-left: 8rem;
+                max-width: 600px;
+
+                strong {
+                    font-weight: bold;
+                    font-size: 4rem;
+                    display: block;
+                    color: var(--primary-color);
+
+                    &::before {
+                        content: "";
+                        width: 24px;
+                        height: 2px;
+                        background: #222;
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .en {
+                    font-size: 2rem;
+                    margin-top: 2rem;
+                }
+
+                .detail {
+                    margin-top: 3.5rem;
+
+                    p {
+                        line-height: 1.5;
+                    }
+
+                    .t01 {
+                        font-size: 2.2rem;
+                    }
+
+                    .t02 {
+                        margin-top: 1rem;
+                        font-size: 1.7rem;
+                    }
+
+                    .t03 {
+                        margin-top: 2.8rem;
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+
+        .swiper-slide .img {
+            background-size: cover !important;
+        }
+
+        .swiper-slide01 {
+            .img {
+                background: url("../img/contents/philosophy_01.png");
+            }
+        }
+
+        .swiper-slide02 {
+            .img {
+                background: url("../img/contents/philosophy_02.png");
+            }
+        }
+
+        .swiper-slide03 {
+            .img {
+                background: url("../img/contents/philosophy_03.png");
+            }
+        }
+    }
+
+    .history {
+        width: 1200px;
+        @include push--auto;
+        background: url("../img/contents/history_img.png") no-repeat right bottom;
+
+        .year-wrap {
+            width: 650px;
+
+            &:not(:nth-of-type(1)) {
+                margin-top: 4.5rem;
+            }
+
+            >.year {
+                font-size: 5rem;
+                font-family: "Montserrat", sans-serif;
+                border-bottom: 2px solid #222;
+                display: block;
+                width: 100%;
+                padding-bottom: 1rem;
+            }
+
+            .history-tb {
+                display: table;
+                width: 100%;
+
+                font-size: 1.7rem;
+
+                .th {
+                    font-size: 1.8rem;
+                    font-family: "Montserrat", sans-serif;
+                    background: #f7f7f7;
+                    width: 88px;
+                    padding: 23px 10px;
+                    text-align: center;
+                }
+
+                .td {
+                    padding: 23px 10px 23px 20px;
+                }
+
+                .th,
+                .td {
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    border-bottom: 1px solid #e5e5e5;
+                }
+            }
+        }
+    }
+
+    @include mq("contents") {
+        .company-info-bg .txt {
+            width: auto;
+            padding: 0 2rem;
+        }
+
+        .subtxt {
+            padding: 0 2rem;
+
+            br {
+                display: none;
+            }
+        }
+
+        .company-service {
+            width: auto;
+            margin: 4rem 2rem 0 2rem;
+        }
+
+        .philosophy .img {
+            background-position: right center !important;
+        }
+
+        .history {
+            width: auto;
+            margin: 0 2rem;
+        }
+    }
+
+    @include mq("tablet-wide") {
+        .history {
+            background-image: none;
+
+            .year-wrap {
+                width: 100%;
+            }
+        }
+    }
+
+    @include mq("tablet") {
+        .philosophy {
+            .pager {
+                top: 0;
+                left: calc(100% - 68px);
+            }
+
+            .ph-container {
+                flex-wrap: wrap;
+                height: auto;
+
+                .img,
+                .txt {
+                    width: 100%;
+
+                    height: auto;
+                }
+
+                .img {
+                    height: 400px;
+                }
+
+                .txt {
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+
+    @include mq("tablet-small") {
+        .company-info-bg {
+            height: auto;
+            padding: 10rem 0;
+        }
+
+        .subtxt {
+            font-size: 2.5rem;
+        }
+
+        .company-service {
+            flex-wrap: wrap;
+
+            li {
+                width: 50%;
+
+                &:nth-child(3) {
+                    border-left: none;
+                }
+
+                &:nth-child(3),
+                &:nth-child(4) {
+                    border-top: 1px solid #e5e5e5;
+                }
+
+                br {
+                    //	display: none;
+                }
+            }
+        }
+    }
+}

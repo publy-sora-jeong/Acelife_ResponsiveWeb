@@ -1,0 +1,115 @@
+.footer {
+    background: #333333;
+    padding: 3.3em 2rem 3em 2rem;
+
+    .container {
+        width: 1200px;
+        @include push--auto;
+    }
+
+    .policy {
+        position: relative;
+
+        .sns {
+            position: absolute;
+            right: 0;
+            top: -15px;
+
+            a {
+                display: inline-block;
+                width: 45px;
+                height: 45px;
+                background: #221e1f;
+                border-radius: 50%;
+                margin-left: 4px;
+
+                &.youtube {
+                    background: #221e1f url("../img/icon/f_youtube.png") no-repeat center;
+                }
+
+                &.blog {
+                    background: #221e1f url("../img/icon/f_blog.png") no-repeat center;
+                }
+            }
+        }
+
+        ul {
+            li {
+                display: inline-block;
+                margin-right: 40px;
+                position: relative;
+
+                &:not(:first-child)::before {
+                    content: "";
+                    position: absolute;
+                    left: -27px;
+                    top: 2px;
+                    width: 1px;
+                    height: 16px;
+                    background: rgba(255, 255, 255, 0.2);
+                }
+
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .f-info {
+        margin-top: 24px;
+        padding-top: 1.5em;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+
+        .logo {
+            width: 135px;
+            float: left;
+            padding-left: 11px;
+        }
+
+        .info {
+            float: left;
+            width: calc(100% - 135px);
+            font-size: 1.5rem;
+            color: #828282;
+            line-height: 1.6;
+        }
+    }
+
+    @include mq("contents") {
+        .container {
+            width: 100%;
+        }
+    }
+
+    @include mq("tablet") {
+        padding: 2em;
+
+        .f-info {
+            margin-top: 1em;
+
+            .info {
+                font-size: 13px;
+            }
+        }
+    }
+
+    @include mq("tablet-small") {
+        padding-bottom: 60px;
+
+        .f-info {
+            .logo {
+                width: auto;
+                float: none;
+                padding-left: 0;
+            }
+
+            .info {
+                width: 100%;
+                float: none;
+                margin-top: 1.2em;
+            }
+        }
+    }
+}

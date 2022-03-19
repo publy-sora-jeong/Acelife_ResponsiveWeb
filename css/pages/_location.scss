@@ -1,0 +1,35 @@
+.location {
+    width: 1200px;
+    @include push--auto;
+    border-top: 2px solid #222;
+
+    .location-info {
+        text-align: center;
+        font-size: 2rem;
+        color: #222;
+        padding: 2.6rem 1rem 2.2rem 1rem;
+        border-bottom: 1px solid #e5e5e5;
+
+        .address {
+            margin-bottom: 7px;
+        }
+
+        ul {
+            li {
+                margin: 0 1.5rem;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 1.7rem;
+            }
+        }
+    }
+
+    .map {
+        margin-top: 2rem;
+    }
+
+    @include mq("contents") {
+        width: auto;
+        padding: 0 2rem;
+    }
+}

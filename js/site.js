@@ -1,12 +1,7 @@
 $(document).ready(function () {
 	skipContents();
 
-	setTimeout(function () {
-		//savePosition();
-		//activeBtn(scroll);
-		msieversion();
-	}, 500);
-
+	//msieversion()
 	$.exists = function (selector) {
 		return $(selector).length > 0;
 	};

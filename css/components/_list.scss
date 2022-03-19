@@ -1,0 +1,22 @@
+.li-dot {
+    li {
+        padding-left: 14px;
+        position: relative;
+        margin-top: 12px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            background: #d54d52;
+            border-radius: 50%;
+            position: absolute;
+            left: 3px;
+            top: 6px;
+        }
+    }
+}

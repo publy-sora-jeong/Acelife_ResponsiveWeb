@@ -1,0 +1,45 @@
+.certificate {
+    ul {
+        letter-spacing: -10px;
+        border-top: 2px solid #222;
+        padding-top: 28px;
+
+        li {
+            letter-spacing: 0;
+            width: 23.5%;
+            display: inline-block;
+            margin-left: 2%;
+            margin-bottom: 2.2em;
+            vertical-align: top;
+
+            &:nth-child(4n + 1) {
+                margin-left: 0;
+            }
+
+            p {
+                font-size: 1.8rem;
+                text-align: center;
+                margin-top: 14px;
+            }
+        }
+    }
+
+    @include mq("tablet-small") {
+        ul {
+            padding-top: 15px;
+
+            li {
+                width: 47.5%;
+                margin-bottom: 1.4em;
+
+                &:nth-child(4n + 1) {
+                    margin-left: 0;
+                }
+
+                &:nth-child(3n + 1) {
+                    margin-left: 2%;
+                }
+            }
+        }
+    }
+}

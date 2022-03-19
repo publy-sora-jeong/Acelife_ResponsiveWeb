@@ -1,0 +1,210 @@
+//상품 상세페이지 
+.product-detail {
+    .prd-top {
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1px solid #e0e0e0;
+        height: 665px;
+        overflow: hidden;
+
+        .prd-img {
+            width: 50%;
+            background: #fafafa;
+            text-align: right;
+            position: relative;
+            height: 100%;
+        }
+
+        .prd-thumblist {
+            position: absolute;
+            width: 160px;
+            left: calc(100% + 45px);
+            bottom: 60px;
+
+            .swiper-slide-thumb-active {
+                img {
+                    border-width: 3px;
+                }
+            }
+
+            img {
+                width: 75px;
+                height: 75px;
+                border: 1px solid #e0e0e0;
+            }
+        }
+
+        .prd-desc {
+            width: 50%;
+            padding-left: 45px;
+            text-align: left;
+            position: relative;
+            height: 100%;
+
+            .prd-name {
+                margin-top: 45px;
+
+                >p {
+                    color: #444444;
+                }
+
+                strong {
+                    font-size: 5rem;
+                }
+            }
+
+            .li-dot {
+                margin-top: 22px;
+            }
+
+            .spec {
+                margin-top: 43px;
+                padding-top: 28px;
+                padding-left: 5px;
+                border-top: 1px solid #e0e0e0;
+
+                li {
+                    margin-top: 12px;
+                    position: relative;
+                    width: 100%;
+
+                    >strong {
+                        width: 100px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+
+                    span {
+                        padding-left: 100px;
+                        display: block;
+                        color: #888888;
+                    }
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .btn-list {
+                display: block;
+                background: #333;
+                color: #fff;
+                position: absolute;
+                left: 343px;
+                bottom: 60px;
+                width: 195px;
+                height: 75px;
+                text-align: center;
+                font-size: 1.8rem;
+                line-height: 75px;
+
+                span::after {
+                    content: "";
+                    width: 20px;
+                    height: 14px;
+                    background: url("../img/icon/list.png") no-repeat;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 45px;
+                }
+            }
+        }
+    }
+
+    .prd-detail {
+        margin-top: 55px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    @include mq("tablet-wide") {
+        .prd-top {
+            height: 560px;
+
+            .prd-desc {
+                .tag {
+                    margin-top: 0;
+                }
+
+                .prd-name {
+                    margin-top: 25px;
+                }
+
+                .li-dot li,
+                .spec li {
+                    margin-top: 7px;
+                }
+
+                .spec {
+                    margin-top: 20px;
+                    padding-top: 20px;
+                }
+
+                .btn-list {
+                    left: initial;
+                    right: 10px;
+                    width: 145px;
+
+                    span::after {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq("tablet") {
+        .prd-top {
+            flex-wrap: wrap;
+            height: auto;
+
+            .prd-img {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                padding-bottom: 20px;
+            }
+
+            .prd-thumblist {
+                position: static;
+            }
+
+            .prd-desc {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                overflow: hidden;
+
+                .btn-list {
+                    position: static;
+                    float: right;
+                    height: 45px;
+                    line-height: 45px;
+                    margin-top: -40px;
+                }
+            }
+        }
+    }
+
+    @include mq("tablet-small") {
+        .prd-top {
+            .prd-desc {
+                .li-dot {
+                    margin-top: 10px;
+                }
+
+                .spec {
+                    margin-top: 10px;
+                    padding-top: 15px;
+                }
+
+                .btn-list {
+                    margin: 20px auto 0;
+                    float: none;
+                }
+            }
+        }
+    }
+}

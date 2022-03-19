@@ -1,0 +1,58 @@
+.ceo-greeting {
+    display: flex;
+    width: 1200px;
+    @include push--auto;
+    justify-content: space-between;
+
+    .img {
+        width: 37.5%;
+    }
+
+    .txt {
+        width: 62.5%;
+        padding-left: 5.5%;
+        font-size: 1.8rem;
+        line-height: 1.4;
+
+        .first {
+            font-size: 2.6rem;
+        }
+
+        p {
+            margin-top: 25px;
+
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include mq("contents") {
+        width: auto;
+        margin: 0 2rem;
+    }
+
+    @include mq("tablet") {
+        .txt {
+            font-size: 14px;
+
+            p:nth-child(1) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    @include mq("tablet-small") {
+        flex-wrap: wrap;
+
+        .img {
+            display: none;
+            width: 100%;
+        }
+
+        .txt {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}

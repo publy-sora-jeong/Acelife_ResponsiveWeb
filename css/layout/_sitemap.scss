@@ -1,0 +1,106 @@
+.sitemap {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: none;
+
+    .container {
+        width: 1200px;
+        height: 570px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff url("../img/bg/sitemap_bg.png") no-repeat right bottom;
+        border-radius: 0 130px 0 130px;
+
+        .close-sitemap {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: url("../img/icon/close.png") no-repeat;
+            width: 24px;
+            height: 20px;
+        }
+
+        >ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 100%;
+
+            >li {
+                width: 20%;
+                height: 100%;
+                border-left: 1px solid #e5e5e5;
+                padding-top: 90px;
+                text-align: center;
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                >a {
+                    display: block;
+                    font-size: 2.2rem;
+                    font-weight: bold;
+                    color: #222222;
+
+                    &::after {
+                        content: "";
+                        width: 30px;
+                        height: 5px;
+                        background: #ec1f27;
+                        display: block;
+                        margin: 35px auto 0 auto;
+                    }
+                }
+
+                >ul>li {
+                    margin-top: 16px;
+
+                    &:first-child {
+                        margin-top: 28px;
+                    }
+
+                    a {
+                        font-size: 1.8rem;
+                        display: block;
+                    }
+                }
+
+                .depth03 {
+                    margin-top: 13px;
+
+                    li {
+                        margin-top: 6px;
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        font-size: 1.6rem;
+                        color: #888888;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq("contents") {
+        .container {
+            width: calc(100% - 40px);
+        }
+    }
+
+    @include mq("tablet-wide") {
+        display: none !important;
+    }
+}

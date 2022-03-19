@@ -1,0 +1,128 @@
+.btn-area {
+    text-align: center;
+    margin-top: 3rem;
+    letter-spacing: -10px;
+
+    >a {
+        vertical-align: top;
+        letter-spacing: 0;
+        margin: 0 2px 0 3px;
+    }
+}
+
+.btn-edit {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    width: 65px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 45px;
+}
+
+.btn-delete {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #222;
+    color: #222;
+    width: 65px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 45px;
+}
+
+.btn-list {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    width: 120px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 45px;
+
+    span::after {
+        content: "";
+        width: 16px;
+        height: 14px;
+        background: url("../img/icon/list.png") no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 25px;
+    }
+}
+
+.btn-print {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 50px;
+    border-radius: 50px;
+
+    span::before {
+        content: "";
+        width: 25px;
+        height: 27px;
+        background: url("../img/icon/print.png") no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+    }
+}
+
+.btn-send {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #222;
+    color: #222;
+    width: 120px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 45px;
+}
+
+.btn-cancel {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    width: 120px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 45px;
+}
+
+
+.btn-quest {
+    background: #222;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    width: 215px;
+    border-radius: 55px;
+    font-size: 1.8rem;
+
+    span {
+        display: inline-block;
+
+        &::after {
+            content: "";
+            width: 9px;
+            height: 15px;
+            margin-left: 50px;
+            background: url("../img/icon/arr_w_right.png");
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
